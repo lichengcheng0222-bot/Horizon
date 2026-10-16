@@ -5,370 +5,291 @@ date: 2026-10-16
 lang: en
 ---
 
-> From 47 items, 15 important content pieces were selected
+> From 47 items, 11 important content pieces were selected
 
 ---
 
 **Technology News**
-1. [Meta releases Muse Spark Open, an 816B open-weight model with MaaS license limits](#item-tech-news-1) ⭐️ 8.0/10
-2. [RPKI route validation reaches 70% of internet routes, ipinfo reports](#item-tech-news-2) ⭐️ 8.0/10
-3. [BIPM adopts resolution to stop adding leap seconds to UTC from 2027](#item-tech-news-3) ⭐️ 8.0/10
-4. [Libreboot 26.10 &quot;Ominous Olive&quot; adds UEFI and Chromebook support](#item-tech-news-4) ⭐️ 8.0/10
-5. [Meta&\#x27;s new commercial terms reportedly allow scraping of news sites](#item-tech-news-5) ⭐️ 7.0/10
-6. [GNOME Blog Post Discusses Using AI to Reverse Engineer Hardware](#item-tech-news-6) ⭐️ 7.0/10
-7. [Shanghai AI Lab announces Atria Dawn agent model on 744B GLM-5.2 MoE](#item-tech-news-7) ⭐️ 7.0/10
-8. [SemiAnalysis AgentX benchmark claims AMD MI355X beats Blackwell on MoE inference cost](#item-tech-news-8) ⭐️ 7.0/10
-9. [StepFun releases Step 5 Preview, a 600B-parameter agent model](#item-tech-news-9) ⭐️ 7.0/10
+1. [Meta releases Muse Spark Open, an 816B-A42B open-weight model](#item-tech-news-1) ⭐️ 8.0/10
+2. [BIPM resolves to stop adding leap seconds to UTC](#item-tech-news-2) ⭐️ 8.0/10
+3. [Libreboot 26.10 &\#x27;Ominous Olive&\#x27; adds UEFI, Chromebook support](#item-tech-news-3) ⭐️ 8.0/10
+4. [RPKI route-origin validation now covers about 70% of internet routes](#item-tech-news-4) ⭐️ 7.0/10
+5. [Goodfire post argues neural networks are &\#x27;clean,&\#x27; drawing interpretability debate](#item-tech-news-5) ⭐️ 7.0/10
+6. [Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO](#item-tech-news-6) ⭐️ 7.0/10
+7. [StepFun Releases Step 5 Preview: 600B MoE Agent Model](#item-tech-news-7) ⭐️ 7.0/10
 
 **Technology Blog**
-1. [Serving Kimi K3 on AMD MI355X: vLLM Inference Optimizations](#item-tech-blog-1) ⭐️ 8.0/10
-2. [AI Is Driving a Boom in Modestly Successful Software](#item-tech-blog-2) ⭐️ 7.0/10
+1. [Scaling Kimi K3 on AMD MI355X with vLLM](#item-tech-blog-1) ⭐️ 8.0/10
+2. [AI&\#x27;s Software Boom Shows Up in Modest Projects](#item-tech-blog-2) ⭐️ 7.0/10
 
 **Financial News**
-1. [IMF: Rural Chinese healthcare spending is second only to U.S. as share of income](#item-finance-news-1) ⭐️ 7.0/10
-2. [Harvard endowment returns 27.1% in fiscal 2026, with SpaceX as top holding](#item-finance-news-2) ⭐️ 7.0/10
-3. [AI 数据中心投资受市场回调与利率上升，多项投资被撤回和暂停](#item-finance-news-3) ⭐️ 7.0/10
-4. [中国商务部就AI、生物医药、光伏40项技术出口管制公开征求意见](#item-finance-news-4) ⭐️ 7.0/10
+1. [AI data-centre listings pulled as market selloff and higher rates hit deal boom](#item-finance-news-1) ⭐️ 7.0/10
+2. [China proposes temporary export registration for 40 AI, biopharma and solar technologies](#item-finance-news-2) ⭐️ 7.0/10
 
 ---
 
 ## Technology News
 
 <a id="item-tech-news-1"></a>
-### [Meta releases Muse Spark Open, an 816B open-weight model with MaaS license limits](https://research.meta.ai/blog/muse-spark-open) ⭐️ 8.0/10
+### [Meta releases Muse Spark Open, an 816B-A42B open-weight model](https://research.meta.ai/blog/muse-spark-open) ⭐️ 8.0/10
 
-Meta released Muse Spark Open, an open-weight large language model listed on Hugging Face as 816B-A42B under the meta-models organization, with a companion developer blog post dated October 15, 2026. The release is positioned as &quot;The Most Capable US Open-Weight Model,&quot; and a 9to5Mac article describes it as optimized to run on Mac Studio. Its license carries a model-as-a-service clause: commenters quoting the terms say licensees and their affiliates may not offer third-party access to the model&\#x27;s outputs via API or similar interfaces once their aggregate gross revenue exceeds $20 million. The item supplied little technical detail or benchmark data, and commenters citing Artificial Analysis say the model underperforms Qwen3.8 Flash Next and GLM 5.3 Flash.
+Meta released Muse Spark Open, an open-weight model listed as 816B-A42B and published on Hugging Face, with reporting that it is optimized to run on Mac Studio. The release is accompanied by a license that permits general use but restricts third parties from offering the model as a service via API or similar interface once the licensee and its affiliates exceed $20 million in aggregate gross revenue. Commenters cite Artificial Analysis comparisons showing it underperforming Qwen3.8 Flash Next and GLM 5.3 Flash, both of which they say run on a single B300, and note that Meta&\#x27;s own headline frames the model as the most capable US open-weight model rather than the most capable overall.
 
 hackernews · bigwheels · Oct 15, 17:47 · [Discussion](https://news.ycombinator.com/item?id=50107379)
 
-**「Background」** Muse Spark Open is an 816B-parameter open-weight model for agentic coding, deployable with SGLang, vLLM, or Apple MLX. It is released under the Muse Model License, which allows many commercial uses with Llama-style limits, including a requirement to display &\#x27;Built with Muse Spark Open&\#x27; in the user interface of products that use it.
+**「Background」** Muse Spark Open is a mixture-of-experts model from Meta Superintelligence Labs: 816B total parameters with 42B activated per token, a 1M-token context window, and native text, image, video and audio input, released under the new Muse Model License \(tool-2-1, tool-2-2\). Meta has also published deployment support for it through Amazon SageMaker JumpStart, which lists both a BF16 and an NVFP4 variant \(tool-2-3\).
 
-**「Impact」** Developers who want to host or adapt the model get first-party tooling: Meta released Helion inference kernels and TorchTitan support for supervised fine-tuning and reinforcement learning, with the model positioned to run on Apple M5 Ultra Mac Studios. Organizations planning to resell access through an API should check the model-as-a-service clause, which a commenter quoting the license says applies once the licensee and its affiliates exceed $20 million in aggregate gross revenue.
+**「Impact」** Organizations planning to build commercial API products on Muse Spark Open need to check the Model-as-a-Service clause, since providers above the $20 million aggregate revenue threshold are not licensed to serve the model&\#x27;s outputs to third parties; the Mac Studio optimization points instead at local or self-hosted deployment. For teams choosing among open-weight options, community-cited benchmarks place Muse Spark Open behind Qwen3.8 Flash Next and GLM 5.3 Flash on hardware that is reported to fit on a single B300.
 
-**「Community discussion」** Much of the debate centered on whether the release is truly open weight: one commenter read the license as allowing general use except for the model-as-a-service clause above the $20 million revenue threshold, while others disputed the open-weight label. On capability, a commenter cited Artificial Analysis showing the model trailing Qwen3.8 Flash Next and GLM 5.3 Flash \(noting that comparisons are published only at the highest reasoning level\), and another observed that US and EU labs increasingly advertise models as the best in their region rather than globally.
+**「Community discussion」** Commenters debated the framing and competitiveness of the release: one noted that open-weight vendors increasingly claim the &quot;best in the US/EU&quot; rather than best overall, while another pointed to Artificial Analysis numbers showing it behind Qwen3.8 Flash Next and GLM 5.3 Flash, and criticized those comparisons for only covering the highest reasoning level rather than the low and medium settings used in high-volume production. One commenter who read the license summarized it as free to use except for the Model-as-a-Service revenue clause, and another argued Meta&\#x27;s strategy is to build a moat around a sticky product rather than to rent out frontier intelligence.
 
 <details><summary>References</summary>
 <ul>
-<li>LICENSE.md · meta-models/Muse-Spark-Open ...</li>
-<li>Meta Drops Muse Spark Open, an 816B Open-Weight Model Rivaling ...</li>
-<li>Build with Muse Spark Open - Meta AI</li>
-<li><a href="https://pytorch.org/blog/muse-spark-open/">Muse Spark Is Now an Open-Weights Model - PyTorch</a></li>
-<li><a href="https://research.meta.ai/blog/muse-spark-open">Introducing Muse Spark Open, The Most Capable US Open‑Weight ...</a></li>
+<li><a href="https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B">meta-models/Muse-Spark-Open-816B-A42B · Hugging Face</a></li>
+<li><a href="https://dev.meta.ai/resources/blog/build-with-muse-spark-open">Build with Muse Spark Open - dev.meta.ai</a></li>
+<li><a href="https://aws.amazon.com/blogs/machine-learning/metas-muse-spark-open-now-available-in-amazon-sagemaker-jumpstart/">Meta’s Muse Spark Open now available in Amazon SageMaker ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#open-weight models`, `#Meta`, `#model licensing`, `#LLM release`, `#community debate`
+**Tags**: `#open-weight models`, `#Meta`, `#LLM release`, `#model licensing`, `#local inference`
 
 ---
 
 <a id="item-tech-news-2"></a>
-### [RPKI route validation reaches 70% of internet routes, ipinfo reports](https://ipinfo.io/blog/rpki-protects-70-internet-routes) ⭐️ 8.0/10
+### [BIPM resolves to stop adding leap seconds to UTC](https://www.bipm.org/en/cgpm-2026/resolution-5) ⭐️ 8.0/10
 
-An ipinfo report says RPKI route-origin validation now covers 70% of internet routes, with China accounting for a large share of the recent increase. China rose from 3.7% of its IPv4 addresses in valid routes to 83.0%, almost 60% of the global gain when counted by addresses. The report presents this as an adoption milestone for routing security, not as a new protocol capability.
+BIPM has published a CGPM 2026 resolution to stop adding leap seconds to UTC, the international time scale it maintains. Readers of the resolution report that insertions and removals end on 20 May 2027 and are not planned afterwards, which would leave the 27 leap seconds added so far as the last, and they note that the resolution page lists several reasons for the change. No resolution text was available in the source item, so the 2027 date, the &quot;27&quot; count, and the precise scope of the change come from community descriptions of the document rather than from the document itself.
 
-hackernews · emot · Oct 16, 00:52 · [Discussion](https://news.ycombinator.com/item?id=50112330)
+hackernews · gliffie · Oct 15, 16:11 · [Discussion](https://news.ycombinator.com/item?id=50105777)
 
-**「Background」** RPKI \(Resource Public Key Infrastructure\) lets a network cryptographically attest which autonomous system is authorized to originate its IP prefixes, so BGP routers can reject route announcements that fail origin validation — addressing BGP&\#x27;s lack of built-in origin authentication. The comparison point for this report is a year earlier, when IPinfo measured 54% of routes as RPKI-valid; the current figure of 70.3% is the change from that baseline.
+**「Background」** UTC is a time standard maintained by the International Bureau of Weights and Measures \(BIPM\) that has historically been adjusted with leap seconds to keep it close to solar time, while International Atomic Time \(TAI\) is a continuous atomic timescale. The 28th General Conference on Weights and Measures \(CGPM\) adopted Resolution 5 on the technical actions needed to ensure the continuity of UTC, following earlier planning to eliminate the leap second and stabilize DUT1 by 2035.
 
-**「What 70% coverage leaves exposed」** The roughly 30% of routes still outside RPKI validation remain exposed, and independent analysis notes that even validated origin does not stop forged-origin hijacks, route leaks, or attribute attacks. Operators looking past origin validation can now evaluate ASPA, which Cloudflare Radar lists as an available validation type alongside RPKI.
+**「Impact」** The immediate practical effect falls on operators of distributed systems and other time-sensitive software: the move to a &quot;leap hour&quot; approach from next year is intended to remove the recurring risk of systems tripping over minutes that last 61 or 59 seconds instead of 60. Researchers quoted in coverage note that such non-standard minutes have already broken software assumptions about time, so the deferral shifts the compatibility burden away from frequent one-second insertions without eliminating the need to plan for a future, much larger adjustment.
 
-**「Community Discussion」** Commenters debated the governance risk of relying on registry databases: one argued that centralizing a country&\#x27;s allowed routes in a database hosted in the Netherlands, with automatic enforcement, makes it easy for the Dutch government to cut off that country&\#x27;s internet access by tampering with the database. Another operator reported that their organization had pushed to make its own and downstream customer routes RPKI-valid, and noted that ASPA is now available for ASN path validation and may be worth adopting later.
+**「Community discussion」** Commenters broadly welcomed the move: myself248 called leap seconds &quot;always stupid&quot; and long overdue, while tialaramex said a decision to stop adding them had already been taken and that this resolution instead settles UTC&\#x27;s definitional tie to solar time by deferring the problem far into the future. xvilka argued the change adds urgency to interplanetary and relativistic time standards as more satellites and computers operate in deep space.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://ipinfo.io/blog/rpki-protects-70-internet-routes">RPKI Now Protects 70% of Internet Routes, Up From 54% a Year Ago</a></li>
-<li><a href="https://news-social.com/features/rpki-protects-70-percent-internet-routes/">RPKI Now Protects 70% of Internet Routes - news-social.com</a></li>
-<li><a href="https://ipregistry.co/blog/rpki-blind-spots">RPKI Covers 67% of Routes, But Four Attack Classes Slip Right Past It</a></li>
-<li><a href="https://radar.cloudflare.com/ip">IP Address Information | Cloudflare Radar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/General_Conference_on_Weights_and_Measures">General Conference on Weights and Measures - Wikipedia</a></li>
+<li><a href="https://www.bipm.org/en/cgpm-2026/resolution-5">Resolution 5 ( 2026 ) - BIPM</a></li>
+<li><a href="https://www.bipm.org/en/cgpm-2026">28th meeting of the CGPM ( 2026 ) - BIPM</a></li>
+<li><a href="https://www.theguardian.com/science/2026/oct/15/times-up-for-the-leap-second-as-scientists-swap-it-for-the-leap-hour">How an accelerating Earth led experts to adopt the leap ... | The Guardian</a></li>
+<li><a href="https://www.abc.net.au/news/science/2026-10-12/we-may-be-about-to-lose-the-leap-second-for-good/107207528">World&#x27;s timekeepers to vote on ditching leap second - ABC News</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#RPKI`, `#BGP security`, `#internet routing`, `#network security`, `#internet infrastructure`
+**Tags**: `#UTC`, `#leap seconds`, `#time standards`, `#BIPM`, `#distributed systems`
 
 ---
 
 <a id="item-tech-news-3"></a>
-### [BIPM adopts resolution to stop adding leap seconds to UTC from 2027](https://www.bipm.org/en/cgpm-2026/resolution-5) ⭐️ 8.0/10
+### [Libreboot 26.10 &\#x27;Ominous Olive&\#x27; adds UEFI, Chromebook support](https://libreboot.org/news/libreboot2610.html) ⭐️ 8.0/10
 
-BIPM&\#x27;s General Conference on Weights and Measures \(CGPM\) has adopted Resolution 5, ending the insertion of leap seconds into UTC starting in 2027. Commenters reading the resolution say it takes effect on 20 May 2027 and, together with the decision not to add a leap second in December, leaves the 27 leap seconds inserted so far as the last ever. The change removes the periodic one-second discontinuities that operating systems, NTP/PTP deployments, databases and distributed systems have had to accommodate, deferring any future correction to keep UTC aligned with solar time to a much longer interval. The published page is a terse resolution document, and the item carried no accompanying source text or independent confirmation of the specifics cited by commenters.
-
-hackernews · gliffie · Oct 15, 16:11 · [Discussion](https://news.ycombinator.com/item?id=50105777)
-
-**「Background」** Leap seconds have been inserted into UTC since 1972 to keep the civil time scale within a second of UT1, the astronomical time scale tied to Earth&\#x27;s rotation; 27 have been added to date. Resolution 5 sets 20 May 2027 as the effective date for a continuous UTC and calls on the IERS to change its operational provisions for, and announcements of, leap seconds accordingly.
-
-**「Impact」** Time-sensitive systems lose the 61-second-minute failure mode that step-based leap insertions could cause in databases, logs, and distributed ledgers, but they must now carry an offset that is no longer bounded: the 2022 CGPM resolution already committed to removing leap seconds before 2035, expanding the tolerated UTC–UT1 gap beyond 0.9 seconds, and this decision removes the remaining insertions. Operationally, any code, contract, or scheduling logic that assumes UTC tracks solar time within that bound needs an explicit drift policy rather than relying on periodic IERS step corrections.
-
-**「Community Discussion」** Commenters noted that the decision not to add leap seconds had already been taken, and that this resolution resolves the residual problem that the agreement bringing UTC into existence defines it as tracking solar time while TAI does not, pushing the issue far enough into the future that it likely never needs resolving. Others argued the change is long overdue, with one commenter calling leap seconds &quot;always stupid,&quot; and another suggesting effort should now go toward interplanetary and relativistic time standards.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.bipm.org/en/cgpm-2026/resolution-5">Resolution 5 (2026) - BIPM</a></li>
-<li><a href="https://trustlist.uk/news/leap-seconds-end-continuous-utc-from-20-may-2027-cgpm-resolution-5">Leap seconds end as UTC becomes continuous on 20 May 2027</a></li>
-<li><a href="https://dev.to/leojulieta/future-proof-your-systems-ditch-leap-seconds-by-2027-1ef3">Future‑Proof Your Systems: Ditch Leap Seconds by 2027</a></li>
-<li><a href="https://www.bigiron.cc/guides/leap-seconds-and-the-smearing-debate-what-breaks">Leap seconds and the smearing debate: what actually breaks ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#timekeeping`, `#standards`, `#UTC`, `#distributed-systems`, `#infrastructure`
-
----
-
-<a id="item-tech-news-4"></a>
-### [Libreboot 26.10 &quot;Ominous Olive&quot; adds UEFI and Chromebook support](https://libreboot.org/news/libreboot2610.html) ⭐️ 8.0/10
-
-Libreboot 26.10, codenamed &quot;Ominous Olive,&quot; adds UEFI/EDK integration and broad Chromebook support to the open-source firmware project. The release imports all 233 currently supported Chromebooks from the MrChromebox coreboot distribution; Baytrail \(Kip\) is tested, other models still need testing, and this Chromebook support is source-only, so users must build it themselves because no binaries are provided. The release also sparked community discussion about its policy on LLM-assisted contributions.
+Libreboot 26.10, codenamed &quot;Ominous Olive&quot;, has been released with UEFI/EDK2 integration and Chromebook support. According to a community comment quoting the release notes, it imports all 233 currently supported Chromebooks from the MrChromebox coreboot distribution, with only Baytrail \(Kip\) tested so far and the Chromebook support provided source-only, meaning users must build from source rather than use prebuilt binaries.
 
 hackernews · iamnothere · Oct 15, 12:52 · [Discussion](https://news.ycombinator.com/item?id=50102923)
 
-**「Background」** Libreboot is a free and open-source boot firmware distribution, and the Chromebook ports added in this release are taken from MrChromebox, a separate project that supplies custom coreboot firmware and firmware utilities for Chromebooks and Chromeboxes. UEFI support via EDK2 is new to Libreboot in this release, which is why it changes what the firmware can boot rather than only how many boards it runs on.
+**「Background」** MrChromebox is an established project that distributes custom coreboot-based firmware and flashing utilities for Chromebooks and Chromeboxes, offering capabilities that stock Google firmware does not. Libreboot&\#x27;s 26.10 release builds on that project by importing its 233 currently supported Chromebook targets, which is why the expanded device list arrives as source-only code with just the Baytrail &quot;Kip&quot; board reported as tested.
 
-**「Impact」** Chromebook owners in the 233 imported model list can try Libreboot, but most will need to build from source and test their own hardware, since only Baytrail \(Kip\) is reported tested and no Chromebook binaries are provided in this release.
+**「Impact」** Owners of the 233 newly imported Chromebooks can now run Libreboot instead of stock firmware, but this release is source-only — no binaries are provided — and the project reports only Baytrail \(Kip\) as tested, so other models require building from source and independent verification before users rely on them. Because Libreboot replaces vendor BIOS/UEFI on specific x86 and ARM boards, those installing it on untested Chromebooks take on the risk of an unvalidated build.
 
-**「Community discussion」** Commenters split on what mattered most: iamnothere argued the UEFI/EDK and Chromebook support is the major advance because it multiplies supported devices, while lf88 welcomed the project&\#x27;s strict LLM-contribution policy and called AI-assisted programming unappealing. cwiggs described related ChromeOS porting work in the Heads project that uses MrChromebox code as an upstream dependency.
+**「Community Discussion」** Commenters debated whether the release&\#x27;s AI contribution policy or its UEFI/EDK2 and Chromebook support was the more important change, with one developer reporting that MrChromebox&\#x27;s code was merged as an upstream dependency for a first ChromeOS port in the Heads project and that two more ports are in progress. Another commenter called the strict policy on LLM-assisted contributions refreshing, while a third pointed to the project&\#x27;s AGENTS file as evidence of its stance on AI.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://mrchromebox.tech/">MrChromebox .tech</a></li>
+<li><a href="https://docs.mrchromebox.tech/docs/firmware/">ChromeOS Device Firmware | MrChromebox .tech</a></li>
 <li><a href="https://libreboot.org/">Libreboot – Free and Open Source BIOS/ UEFI boot firmware</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Libreboot`, `#open-source firmware`, `#UEFI`, `#Chromebook support`, `#LLM contribution policy`
+**Tags**: `#Libreboot`, `#UEFI`, `#Chromebook`, `#open-source firmware`, `#coreboot`
+
+---
+
+<a id="item-tech-news-4"></a>
+### [RPKI route-origin validation now covers about 70% of internet routes](https://ipinfo.io/blog/rpki-protects-70-internet-routes) ⭐️ 7.0/10
+
+IPinfo reports that RPKI route-origin validation now covers roughly 70% of internet routes, a milestone for the system that lets network operators cryptographically attest which autonomous systems may originate their prefixes. Much of the recent increase came from China, where the share of IPv4 addresses in valid routes rose from 3.7% to 83.0% — close to 60% of the global gain when counted by addresses, according to the article. These are the publisher&\#x27;s adoption measurements rather than an independent audit of reduced BGP hijacking.
+
+hackernews · emot · Oct 16, 00:52 · [Discussion](https://news.ycombinator.com/item?id=50112330)
+
+**「Background」** RPKI \(Resource Public Key Infrastructure\) is a cryptographic framework that lets network operators verify that an autonomous system is authorized to originate a specific IP prefix, helping prevent BGP route hijacks. Adoption of RPKI validation has historically been uneven across regions, and the recent global jump in valid routes is driven in large part by a sharp increase in China.
+
+**「Operators still need more than ROV」** Route Origin Validation only proves that a prefix&\#x27;s announced origin is authorized, so a forged-origin hijack that advertises a path through the real origin can still pass RPKI checks — a class of attack Cloudflare documents ASPA as being designed to stop. Operators treating the ~70% ROV coverage figure as sufficient protection should plan for AS\_PATH validation \(ASPA\) and route filtering alongside origin validation.
+
+**「Community discussion」** Commenters raised the centralization trade-off: one argued that concentrating a country&\#x27;s permitted routes in a registry server abroad, with automatic enforcement, would make it easy for a foreign government to cut off that country&\#x27;s connectivity by tampering with the database. Another said their organization had pushed to make its own and downstream customer routes RPKI-valid, and noted that ASPA is now available for ASN path validation, while a third asked whether any public service can verify which country or certificate an IP block belongs to, describing whois as deprecated.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://blog.cloudflare.com/aspa-secure-internet/">ASPA: making Internet routing more secure | Cloudflare Blog</a></li>
+<li><a href="https://www.systemshardening.com/articles/network/bgp-security-rpki/">BGP Security and RPKI: Route Origin Validation for Production ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#RPKI`, `#BGP`, `#routing security`, `#internet infrastructure`, `#internet governance`
 
 ---
 
 <a id="item-tech-news-5"></a>
-### [Meta&\#x27;s new commercial terms reportedly allow scraping of news sites](https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/) ⭐️ 7.0/10
+### [Goodfire post argues neural networks are &\#x27;clean,&\#x27; drawing interpretability debate](https://already-clean.goodfire.com/) ⭐️ 7.0/10
 
-Meta&\#x27;s updated commercial terms would reportedly permit the company to scrape news sites and use their content, according to legal experts cited by Nieman Lab. The report rests on legal interpretation of the contract language rather than a confirmed product or technical change, and the supplied material does not specify effective dates, which account holders are covered, or whether scraping has already begun. Commenters noted that the terms phrase the arrangement as something sites &quot;will consent&quot; to, framing the change as a licensing question rather than a technical capability.
+Goodfire published a post titled &quot;Neural networks are clean&quot; by Nick Cammarata, arguing against the view that individual neurons are heavily polysemantic and that they instead carry small, clean roles. In a linked launch post quoted in the Hacker News thread, Cammarata says he co-authored early mechanistic interpretability work at OpenAI and &quot;came away pessimistic,&quot; framing the new argument as good news for alignment research. The supplied item contains little beyond the link itself, so the claim is presented as an argument rather than an independently verified or benchmarked result, and commenters disputed whether it proves its case.
 
-hackernews · 0in · Oct 15, 23:37 · [Discussion](https://news.ycombinator.com/item?id=50111852)
+hackernews · themgt · Oct 15, 16:04 · [Discussion](https://news.ycombinator.com/item?id=50105647)
 
-**「Background」** The change centers on Meta&\#x27;s commercial terms, the agreement covering business accounts, and a report on the revision states the new terms take effect on October 30, 2026 and would let Meta collect content from websites — the language legal experts are reading as a scraping and content license. That reading lands in an unresolved dispute over whether training AI models on copyrighted material requires a license from the rights holder at all, which is why the enforceability question in the item matters beyond Meta&\#x27;s own terms.
+**「Background」** Mechanistic interpretability has long held that individual neurons are “polysemantic” — responding to many unrelated concepts at once — and explained this with superposition, the idea that models encode far more features than they have neurons. The essay&\#x27;s author, Nick Cammarata, was an early contributor to OpenAI&\#x27;s mechanistic-interpretability work before founding Goodfire. The Goodfire post revisits those famously messy neurons and argues that polysemanticity arose not from superposition but from several ordinary, mostly fixable issues.
 
-**「Impact」** Publishers and other business account holders that accept the terms would need to verify they actually hold rights to sublicense what Meta scrapes, since content licensed from third parties often cannot be passed on — a gap that could leave at least some purported grants unenforceable. The practical lever is contract rather than copyright: a 2024 Meta v. Bright Data ruling found that scraping content behind contractual restrictions may count as a breach even when the data is publicly accessible, so this dispute would likely turn on the terms themselves rather than scraping law.
+**「What it means for interpretability work」** For developers and researchers using current mechanistic interpretability tooling, the post&\#x27;s claim that individual neurons have a small, clean role conflicts with the superposition premise that networks pack more features into shared directions than they have neurons, which is the rationale for analyzing combinations of neurons and for sparse-autoencoder-based methods. Because commenters argue the evidence does not establish that parameter overloading is absent, the &quot;clean&quot; reading should be treated as a contested hypothesis rather than a reason to retire existing superposition-based pipelines.
 
-**「Community Discussion」** Commenters questioned the underlying legal theory, with amluto asking why a business account holder is presumed to own or have the right to sublicense content it may itself license from third parties, and nananana9 arguing that Meta seeking licenses from partners could undercut the industry position that training on copyrighted content requires no license. sandeepkd speculated that Meta may already scrape such sites and that the terms mainly provide legal cover, an opinion rather than an established fact.
+**「Community Discussion」** Commenters disagreed about whether the post&\#x27;s evidence supports its framing: bluejay2387 called the claims &quot;an overreach of what is actually proven,&quot; noting that progressive feature complexity and training-structure effects such as the Lottery Ticket Hypothesis are not mutually exclusive with parameter overloading, while antics described the post as a &quot;massive evidentiary brief&quot; arguing it may be easier than thought to &quot;sequence the AI genome.&quot; sigbottle asked whether relabeling a &quot;Cat &amp; Car&quot; neuron as a &quot;V-shaped neuron&quot; is a substantive change or merely a shift in description.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://dzen.ru/b/atGnB_5wA2igkbBt">Meta свяжет бизнес-аккаунты с разрешением собирать... | Дзен</a></li>
-<li>Meta&#x27;s new commercial terms will allow the scraping of news sites ...</li>
-<li>Web Scraping Legal Issues: 2025 Enterprise Compliance Guide</li>
+<li><a href="https://agihunt.info/en/story/1a14041e1e9ec53c60dad009282">The Debate Over Whether Neural Networks Are… · AGI Hunt</a></li>
+<li><a href="https://www.explainx.ai/blog/goodfire-neural-networks-are-already-clean-cammarata-neurons-interpretable-90-percent-qwen3-32b-2026">&quot;Neural Networks Are Already Clean&quot;: Goodfire&#x27;s Cammarata ...</a></li>
+<li><a href="https://www.goodfire.com/research/already-clean">Neural Networks Are Already Clean - Goodfire</a></li>
+<li><a href="https://arxiv.org/html/2602.11180v1">Mechanistic Interpretability for Large Language Model ...</a></li>
+<li><a href="https://arxiv.org/abs/2602.11180">[2602.11180] Mechanistic Interpretability for Large Language ... Mechanistic Interpretability: Reverse-Engineering Neural ... Mechanistic Interpretability Is Having Its Moment: What ... Superposition and Polysemanticity in AI Interpretability Superposition in LLMs and Feature Representation Mechanistic Interpretability for AI Safety — the field ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI training data`, `#copyright and licensing`, `#web scraping`, `#Meta`, `#tech policy`
+**Tags**: `#mechanistic interpretability`, `#neural networks`, `#AI alignment`, `#AI research`, `#superposition`
 
 ---
 
 <a id="item-tech-news-6"></a>
-### [GNOME Blog Post Discusses Using AI to Reverse Engineer Hardware](https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/) ⭐️ 7.0/10
+### [Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO](https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/) ⭐️ 7.0/10
 
-A GNOME blog post dated October 15, 2026 discusses using AI to reverse engineer hardware, according to the item metadata and analysis. The accompanying Hacker News thread debates practical reverse-engineering workflows, intellectual-property risks, and implications for consumer device security. The supplied item does not include the blog post&\#x27;s methodology, results, or specific hardware examples, so its technical claims cannot be independently assessed here.
+Ahead of an IPO, Anthropic told investors on Wednesday that its third-quarter revenue was $16.8bn, up nearly 50% from $11.5bn in Q2, according to an FT report summarized by Simon Willison. The report, citing people with knowledge of the matter, also said Q1 revenue was about $4.8bn, Q3 adjusted operating margins excluding stock-based compensation were 11%, and the company brought in $1.70 for every $1 spent on computing power. Anthropic told investors that distillation — rivals training on its model outputs — accounted for 5% to 7% of revenue and that it had cut it back materially in Q3; Willison&\#x27;s arithmetic suggests unnamed labs spent over $500m distilling Anthropic&\#x27;s models in Q2. The report says Anthropic no longer appears to be leaning on &quot;annualized run-rate revenue&quot; in these investor communications.
 
-hackernews · ErenayDev · Oct 15, 14:35 · [Discussion](https://news.ycombinator.com/item?id=50104299)
+rss · Simon Willison · Oct 15, 13:04
 
-**「Background」** Christian F.K. Schaller previously wrote on his GNOME blog in March 2026 about using AI to create hardware tools, including applications for an Elgato Light and a Dell Ultrasharp Webcam. The current post, published on the same blog in October 2026, shifts the focus to using AI for reverse engineering hardware.
+**「Background」** Anthropic&\#x27;s path to a public listing has been building since it filed a confidential draft S-1 with the SEC in late May 2026, after a $65bn Series H round that reporting put at roughly a $965bn post-money valuation \(tool-2-2, tool-2-3\). The company has also changed how it describes growth: the source notes that Anthropic previously leaned on &quot;annualized run-rate revenue&quot; in such communications, whereas this investor-day disclosure gave actual quarterly figures instead.
 
-**「Legal Exposure Remains」** Developers who use AI to produce replacement drivers or firmware for abandoned devices still inherit the legal exposure of any reverse-engineering project: reverse engineering itself is generally lawful, but making, using, or selling a patented invention is infringement, and a single project can trigger patent, trade-secret, and contractual claims simultaneously. Vendors whose algorithms are the product are likely to respond by building patent portfolios specifically to create legal barriers to disassembly and scanning, so anyone publishing AI-derived drivers or firmware should verify licensing, anti-circumvention, and patent terms before distribution.
-
-**「Community Discussion」** Commenters report using AI to revive unsupported hardware, including a user-space driver for a FireWire-to-USB box whose manufacturer drivers date to 2006 and reportedly do not work on modern systems. Others raise patent-infringement concerns and suggest applying the approach to smart TVs to remove ads and botnet participation, while one commenter describes reverse engineering nearly all of their own electronics via USB interfaces.
+**「Impact」** Anthropic&\#x27;s own disclosures indicate the revenue it reported is partly built on a stream it is deliberately shutting off: the company told investors distillation accounted for 5% to 7% of revenue before it was cut back &quot;materially&quot; in Q3, while its research posts describe industrial-scale extraction campaigns by DeepSeek, Moonshot and MiniMax \(with a September 2026 threat report adding Alibaba among seven China-based labs\) and claim defenses have since reduced the rate of distillation by more than 90%. For developers and API customers, that enforcement posture is the practical compatibility concern — accounts and access patterns resembling bulk model-output harvesting face restriction — and for anyone assessing the IPO, the growth figures should be read net of a stream Anthropic says it is actively suppressing.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://blogs.gnome.org/uraeus/">Christian F.K. Schaller | Blog talking about Fedora, GNOME ...</a></li>
-<li><a href="https://www.lawgratis.com/blog-detail/ai-hardware-reverse-engineering-ip-disputes">Ai Hardware Reverse Engineering Ip Disputes. - Law Gratis</a></li>
-<li><a href="https://lumenci.com/blogs/reverse-engineering-patent-law/">Reverse Engineering &amp; Patent Law: Doctrines, Cases &amp; Limits</a></li>
-<li><a href="https://thesmartpatent.com/en/blog/patent-strategy-for-reverse-engineering-defense">Patent Strategy Against Reverse Engineering: Protecting ...</a></li>
+<li><a href="https://enersys.co.th/en/insights/anthropic-ipo-s1-965-billion-valuation-2026">Anthropic IPO S-1 + Series H $65B / $965B Valuation 2026 | Enersys</a></li>
+<li><a href="https://www.thestatesman.com/technology/anthropic-ipo-openai-race-valuation-2026-explained-1503600868.html">Explained: Anthropic just filed for an IPO at a $965 billion valuation ...</a></li>
+<li><a href="https://betterstack.com/community/guides/ai/anthropic-threat-report-2026/">Anthropic&#x27;s September 2026 Threat Report: Illicit ...</a></li>
+<li><a href="https://www.anthropic.com/research/detecting-and-preventing-distillation-attacks">Detecting and preventing distillation attacks \ Anthropic</a></li>
+<li><a href="https://www.anthropic.com/research/distillation-defenses">Strengthening our defenses against distillation attacks</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI-assisted reverse engineering`, `#hardware reverse engineering`, `#embedded systems`, `#consumer device security`, `#patent/IP concerns`
+**Tags**: `#Anthropic`, `#AI industry`, `#IPO`, `#revenue growth`, `#distillation`
 
 ---
 
 <a id="item-tech-news-7"></a>
-### [Shanghai AI Lab announces Atria Dawn agent model on 744B GLM-5.2 MoE](https://atria-asi.ai/) ⭐️ 7.0/10
+### [StepFun Releases Step 5 Preview: 600B MoE Agent Model](https://huggingface.co/stepfun-ai/Step-5-Preview) ⭐️ 7.0/10
 
-Shanghai AI Lab announced Atria Dawn on October 12, according to a Telegram post, describing it as an agent model built on the 744B-parameter GLM-5.2 MoE architecture and aimed at research and engineering tasks. The post says Atria Dawn has a 256K context window, supports tool calling and multi-step task execution, and is available through both local deployment and hosted access, with code and weights released under the MIT license. Official demos cited in the post claim it can handle protein structure prediction, CAD modeling, knowledge visualization, slide creation, and data analysis. The source is a short announcement without independent benchmarks or technical details, so these capabilities remain vendor claims.
-
-telegram · zaihuapd · Oct 16, 01:32
-
-**「Background」** Shanghai AI Lab had already put a 744B-parameter &quot;Atria Dawn Preview&quot; on Hugging Face in mid-September 2026 under an MIT licence, with no accompanying blog post or paper, according to reports at the time \(tool-1-1, tool-1-2\). Those reports also noted that the preview was post-trained on Z.ai&\#x27;s GLM-5.2 base rather than a Shanghai AI Lab base model and described a 1M-token context window \(tool-1-3, tool-1-1\), while the current announcement specifies a 256K context window.
-
-**「Impact」** If the MIT-licensed code and weights and local deployment are available as claimed, developers and research groups could evaluate or self-host Atria Dawn instead of relying only on a hosted API. Before adoption, however, they would need to verify the actual release artifacts, hardware requirements, license scope, and performance, because the source provides no independent benchmarks or technical details.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.orcarouter.ai/blog/atria-dawn-preview-quiet-release">Atria Dawn Preview: InternLM&#x27;s 744 B Agentic MoE Ships Quietly</a></li>
-<li><a href="https://reupload.io/en/articles/2026-09-16-shanghai-ai-lab-releases-744b-open-weight-agentic-model">Shanghai AI Lab Releases 744 B Open-Weight Agentic Model</a></li>
-<li><a href="https://sonasi.app/en/blog/atria-dawn-preview-glm-5-2-post-training">Shanghai AI Lab Did Not Train Its Frontier Model . It Post-Trained Z. ai &#x27;s</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI agents`, `#open-source AI`, `#large language models`, `#MoE`, `#Shanghai AI Lab`
-
----
-
-<a id="item-tech-news-8"></a>
-### [SemiAnalysis AgentX benchmark claims AMD MI355X beats Blackwell on MoE inference cost](https://github.com/SemiAnalysisAI/InferenceX) ⭐️ 7.0/10
-
-SemiAnalysis has open-sourced AgentX, described as a roughly $3 million dataset of real agent trajectories that replays code-generation workloads with 1M+ token contexts, multi-turn branching and 95%+ KV-cache hit rates. In that benchmark, the report claims AMD&\#x27;s MI355X doubled throughput on frontier models such as DeepSeek-V4-Pro within 26 days using software-only changes: 70-plus open-source community pull requests, TileLang fused kernel compilation covering Fused MLA and FP8 KV cache, and AMD&\#x27;s in-house ATOM runtime. It says the MI355X&\#x27;s 288 GB of memory lifts batch density enough to cut cost per million tokens by 9% to 40% versus NVIDIA Blackwell on very large MoE architectures \(Kimi K3, GLM-5.3\) at medium latency, while Blackwell keeps a 2–5x energy and cost advantage for extreme low-latency interaction above 150 tokens/s and for very large dense models via NVLink and FP4. The item is a secondhand Telegram summary that reproduces SemiAnalysis&\#x27;s own benchmark claims, with limited published methodology and no independent verification, so the AMD figures should be treated as vendor-adjacent results rather than established measurements.
-
-telegram · zaihuapd · Oct 16, 02:30
-
-**「Background」** SemiAnalysis&\#x27;s AgentX is a scenario within its InferenceX suite that replays long-context, multi-turn coding agent traces rather than the fixed sequence lengths used in earlier chip comparisons, and its public comparison pages report results for models including Kimi K3, DeepSeek V4 Pro, MiniMax M3, Qwen 3.5 and GLM 5.3. The accompanying SemiAnalysis write-up frames the exercise around whether the CUDA moat holds up in agentic inference, and notes that several fixed-sequence configurations already put the MI355X ahead.
-
-**「Impact」** Teams serving very large MoE models such as Kimi K3 or GLM-5.3 at medium latency now have a concrete reason to benchmark AMD&\#x27;s MI355X against Blackwell rather than defaulting to NVIDIA: its 288GB of HBM3e per chip — the capacity figure external write-ups also highlight versus B200&\#x27;s 192GB — raises batch density, which is what the reported 9–40% per-million-token cost edge depends on. That edge is workload-specific and does not transfer to dense-model or sub-150 tok/s serving, where NVIDIA&\#x27;s 2–5x advantage stands; one external comparison found B300 matching the 288GB capacity and beating MI355X on every published K3 point by 1.25–1.75x, leaving AMD only about an 11% ownership-cost edge. Because the headline numbers come from SemiAnalysis&\#x27;s own AgentX replay rather than an independent reproduction, operators should validate them against their own agent traces before displacing an existing NVIDIA deployment.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://inferencex.semianalysis.com/compare">AgentX Inference Comparisons | InferenceX by SemiAnalysis</a></li>
-<li><a href="https://newsletter.semianalysis.com/p/agentx-inferencexv3-does-cuda-moat">AgentX - InferenceXv3: Does CUDA Moat Hold up in Agentic Inferencing?</a></li>
-<li>InferenceX v2: NVIDIA Blackwell Vs AMD vs Hopper - SemiAnalysis</li>
-<li>AMD MI355X vs NVIDIA B200 vs B300 for Open-Weight Serving</li>
-<li>hopper, blackwell, and instinct: the exhaustive guide to llm inference ...</li>
-
-</ul>
-</details>
-
-**Tags**: `#AI inference`, `#AMD MI355X`, `#NVIDIA Blackwell`, `#CUDA ecosystem`, `#agent workloads`
-
----
-
-<a id="item-tech-news-9"></a>
-### [StepFun releases Step 5 Preview, a 600B-parameter agent model](https://huggingface.co/stepfun-ai/Step-5-Preview) ⭐️ 7.0/10
-
-StepFun published Step 5 Preview on Hugging Face, a flagship sparse Mixture-of-Experts model aimed at agentic work with 600 billion total parameters and 27 billion active parameters. It supports up to a 1 million-token context window and accepts text, image, and video input, and can be deployed through an OpenAI-compatible API using vLLM or SGLang under the StepFun Model License 1.0. StepFun claims the model leads on software engineering, long-horizon agent execution, and specialized professional tasks, particularly in finance; these performance comparisons come from the provider and have not been independently verified. The release is labeled a Preview, and the sourced announcement is a brief summary rather than a technical report.
+StepFun published Step 5 Preview on Hugging Face, a sparse Mixture-of-Experts multimodal model aimed at agentic workloads. It has 600 billion total parameters with 27 billion active, supports up to a 1 million-token context window, and accepts text, image, and video input. The model can be deployed through an OpenAI-compatible API with vLLM or SGLang under the StepFun Model License 1.0. StepFun claims the model leads on software engineering, long-horizon agent execution, and professional-knowledge tasks, with particular strength in financial scenarios, but the release is a preview and no benchmarks or independent measurements accompany these claims.
 
 telegram · zaihuapd · Oct 16, 06:36
 
-**「Background」** Sparse Mixture-of-Experts models route each token through only a small subset of their parameters, which is why Step 5 Preview&\#x27;s 600B total-parameter figure describes capacity while per-token compute tracks the far smaller 27B active count \(tool-2-1, tool-2-2\). StepFun published BF16 and FP8 weights on Hugging Face and ModelScope together with a technical blog, making the model self-hostable rather than available only through a hosted endpoint \(tool-2-3\).
+**「Background」** StepFun first detailed Step 5 Preview in September as a long-context agent model, saying it uses a sparse-attention scheme called Sparse GQA to select task-relevant history and cut the number of tokens actually entering attention for a 1M-token window \(tool-2-2\). The company then open-sourced the model on October 15, releasing BF16 and FP8 weights, a technical report, supporting development tools, and deployment guides \(tool-2-3\), which the Hugging Face posting follows.
 
-**「Impact」** Because Step 5 Preview is positioned for agentic work and can be served through vLLM or SGLang behind an OpenAI-compatible API, teams with existing OpenAI-API client code can trial it in self-hosted deployments without rewriting integration layers. The practical constraint is licensing: the model ships under StepFun Model License 1.0 rather than a standard permissive open-source license, so organizations should review its terms before commercial use, and the &quot;Preview&quot; label means production adoption should follow their own evaluation rather than the provider&\#x27;s benchmark claims.
+**「Impact」** The practical integration path for developers is an OpenAI-compatible API served through vLLM or SGLang, but the release ships under the custom StepFun Model License 1.0 rather than a standard open-source license, so organizations should review commercial-use and redistribution terms before building on it. Independent verification is still thin: a third-party benchmark tracker lists Step 5 Preview at \#20 of 224 with an estimated 69.44/100, while StepFun&\#x27;s own &quot;frontier-level&quot; performance description remains a vendor claim for a preview model.
 
 <details><summary>References</summary>
 <ul>
-<li>stepfun-ai/Step-5-Preview - Hugging Face</li>
-<li>Step 5 Preview: Advancing the Pareto Frontier - 阶跃星辰</li>
-<li>StepFun on X: &quot;Step 5 Preview is now open weights. BF16 and FP8 ...</li>
-<li><a href="https://www.stepfun.com/step-5-preview">Step 5 Preview: Advancing the Pareto Frontier</a></li>
+<li><a href="https://news.qq.com/rain/a/20260920A06EUP00">阶跃发布Step 5 Preview：600B MoE瞄准长程Agent，10月将开源</a></li>
+<li><a href="https://news.qq.com/rain/a/20261015A097DD00">阶跃开源Step 5 Preview，模型权重与技术报告同日发布</a></li>
+<li><a href="https://github.com/stepfun-ai/Step-5-Preview">GitHub - stepfun-ai/Step-5-Preview: StepFun&#x27;s flagship model ...</a></li>
+<li><a href="https://benchlm.ai/models/step-5-preview">Step 5 Preview Benchmarks, Pricing &amp; Speed (October 2026)</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#MoE`, `#agentic AI`, `#long context`, `#model release`
+**Tags**: `#LLM`, `#Mixture-of-Experts`, `#long-context`, `#AI agents`, `#model release`
 
 ---
 
 ## Technology Blog
 
 <a id="item-tech-blog-1"></a>
-### [Serving Kimi K3 on AMD MI355X: vLLM Inference Optimizations](https://vllm.ai/blog/2026-10-16-kimi-k3-mi355x) ⭐️ 8.0/10
+### [Scaling Kimi K3 on AMD MI355X with vLLM](https://vllm.ai/blog/2026-10-16-kimi-k3-mi355x) ⭐️ 8.0/10
 
 rss · vLLM Blog · Oct 16, 00:00
 
-**「Background」** On the public AgentX benchmark, which replays real coding-agent session traces using synthetic tokens and retains request lengths and prefix-sharing patterns \(over 96% theoretical prefix reuse with unlimited cache\), eight AMD Instinct MI355X GPUs serving Kimi K3 with vLLM reportedly reach 24.4% more tokens/s/GPU than NVIDIA HGX B300 at 50 tokens/s/user P90 interactivity \(7,567 vs 6,083\). AMD and Embedded LLM set out to explain the engineering behind that result and why each optimization worked.
+**「Background」** Kimi K3&\#x27;s agent workload reuses long prefixes but still touches three costly state types: MLA compressed KV history, KDA recurrent state matrices, and MoE expert weights. Under tensor parallelism, each GPU replicated the full MLA history and repeated MoE output work.
 
-**「Solution」** The authors trace the gains to roughly 50 merged AMD/ROCm-related vLLM PRs attacking wasted memory, work, and parallelism. Cache: eight-way decode context parallelism shards MLA&\#x27;s compressed KV history across GPUs, cutting an estimated 1.96 GB per GPU for a 142,000-token conversation to about 245 MB, while CPU offload keeps MLA history and KDA checkpoints in host DRAM — but only if resume points align across layers, so the attention-block tail is saved with the KDA checkpoint. MoE: each rank now computes only the output coordinates it owns and adds them to its shared-expert partial, reusing an existing all-reduce; the PR measured 3.05–4.91% higher output throughput, and loading only each rank&\#x27;s weight rows freed about 3.85 GiB per GPU, which at concurrency 70 coincided with prefix-cache hit rate rising from 74.8% to 80.1%. Memory traffic: fusing AttnRes with RMSNorm kept temporaries in registers \(14.2% throughput gain\), and moving input packing into specialized matmul branches removed 69 useless copies per decode step whose cost was launch overhead, not bytes. MLA: padding 12 query heads to 16 unlocked AMD AITER&\#x27;s assembly decode path, dropping 43.8 to 23.6 ms per output token at 32K input. KDA: grouped prefill with an ordered scan, plus narrower four-column verification tiles, cut per-layer time from 16.20 to 5.61 microseconds. For speculative decoding, the authors note four drafts yield 12% more committed tokens than three, so they pay off only if the complete draft–verify–commit cycle stays under 12% slower.
+**「Solution」** AMD and Embedded LLM&\#x27;s vLLM work attacks these costs layer by layer. Eight-way decode context parallelism \(DCP8\) partitions MLA history across GPUs—cutting an estimated 1.96 GB per GPU for a 142,000-token conversation to about 245 MB—while CPU offload preserves MLA and KDA state with aligned resume points. MoE output ownership makes each GPU compute only its assigned output coordinates and fold them into the existing shared-expert all-reduce; the authors report 3.05–4.91% higher output throughput at TP8, and a later separate test freed about 3.85 GiB per GPU across 92 MoE layers while lifting high-concurrency throughput 28.9%. Other changes fuse the single-token KDA path and AttnRes/RMSNorm \(14.2% higher output throughput\), pad MLA&\#x27;s query heads to 16 to enable AMD AITER assembly \(43.8 to 23.6 ms/token at 32K input\), and narrow speculative-verification tiles, cutting a kernel test from 16.20 to 5.61 microseconds per layer \(2.89×\). The authors treat draft depth as a cost budget: four drafts yield 3.36 versus 3.00 expected committed tokens per cycle—12% more—so they pay only if the full cycle grows less than 12%. The headline AgentX result—7,567 versus 6,083 total tokens/s/GPU at 50 tokens/s/user P90, and 87.4% more tokens per dollar under modeled TCO—is vendor-authored and partly modeled, from separate tests.
 
-**「Takeaway」** The authors argue the broader lesson generalizes beyond this stack: profile for replicated work before a collective, temporary buffers with no consumer on the selected path, and too few independent workgroups, then measure the complete request at the target interactivity. The headline numbers remain vendor-authored, resting on modeled TCO, synthetic acceptance curves, and an unrecorded dataset revision.
+**「Takeaway」** The larger point is that serving wins here come from eliminating duplicated or unused work across GPUs, kernels, and the whole draft–verify–commit cycle—not from peak FLOPS alone—though the NVIDIA comparison still needs independent validation.
 
-**Tags**: `#LLM inference optimization`, `#vLLM`, `#AMD ROCm`, `#Mixture-of-Experts`, `#speculative decoding`
+**Tags**: `#LLM inference optimization`, `#AMD MI355X`, `#vLLM`, `#MoE/attention kernels`, `#speculative decoding`
 
 ---
 
 <a id="item-tech-blog-2"></a>
-### [AI Is Driving a Boom in Modestly Successful Software](https://seangoedecke.com/ai-is-driving-a-boom-in-modestly-successful-software/) ⭐️ 7.0/10
+### [AI&\#x27;s Software Boom Shows Up in Modest Projects](https://seangoedecke.com/ai-is-driving-a-boom-in-modestly-successful-software/) ⭐️ 7.0/10
 
 rss · Sean Goedecke · Oct 16, 00:00
 
-**「Background」** If AI coding agents let anyone turn an idea into working software, why is there no visible explosion of amazing new products? Sean Goedecke argues the software exists, but it is spread across a long tail of modestly successful plugins, mods, extensions and small games rather than concentrated in hits.
+**「Background」** If coding agents let anyone turn an idea into working software, why is there no visible explosion of impressive new products? Sean Goedecke argues the missing software exists, but is spread across many modestly successful projects rather than concentrated in blockbusters.
 
-**「Solution」** He sampled roughly twenty marketplaces and registries that expose install counts, comparing successful projects in 2022–24 with 2025–26 — before and after agentic coding went mainstream in mid-2025. Total projects grew about 10x, and modestly successful ones about 2x, while massively successful projects \(excluding AI tools\) showed no real growth. Concretely: NVDA screen-reader addons with over a thousand downloads roughly doubled, though none crossed ten thousand; HACS home-automation plugins with over a hundred installs doubled, with no change above a thousand; Steam games with over a hundred reviews rose about 60%; Obsidian plugins, Firefox and Chrome extensions, Nexus mods and Blender extensions followed the same pattern. Google Play and WordPress plugins did not. The author prefers addons and plugins because install counts reveal actual use and exclude software that merely helps people code with AI — &quot;selling shovels&quot; — though he concedes voluntary AI disclosure is unusable, since hobbyist communities dogpile admitted AI users, and he flags confounds like Obsidian&\#x27;s relaxed review policy. His explanation for why growth concentrates in the middle is explicitly speculation: big products already ship the features they want, are constrained by their existing systems, and their real gains are subtle; perhaps good product ideas remain hard, or today&\#x27;s thousand-user tools need years to grow.
+**「Solution」** To test this, the author compared installation counts across roughly twenty marketplaces, plugin registries, and modding platforms before agentic coding went mainstream \(2022-24\) and after \(2025-26\). Overall, somewhere between 2x and 20x more new software is being created depending on where you look, with no real growth in massively successful projects and about 2x growth in modestly successful ones. Concretely, the NVDA screen-reader directory had over twice as many new addons with more than a thousand downloads but no change above ten thousand; HACS home-automation plugins doubled above a hundred installs with no change above a thousand; Steam games with over a hundred reviews are roughly 60% more common; and Obsidian plugins, Firefox and Chrome extensions, Nexus game mods, and Blender extensions followed the same pattern, while Google Play and WordPress plugins did not. The author chose plugins and mods partly to exclude AI tooling itself and focus on ordinary problems, and partly because install data reveals actual use rather than merely created repositories. He concedes that AI attribution is hard, since hobbyist communities punish disclosure, and that some counts needed scaling for platform changes, such as Obsidian relaxing admin review of new plugins. Speculating on the shape of the boom, he suggests large companies already have the visible features they want and are slowed by technical paralysis, while it remains unclear why no wildly successful hobbyist projects have emerged — perhaps good ideas are simply hard, or successful projects need years to grow.
 
-**「Takeaway」** The author&\#x27;s conclusion is that AI expands the long tail of useful software rather than the head, so the expected boom in great software may be dispersed across thousands of tools that a few hundred or thousand people find genuinely useful.
+**「Takeaway」** Goedecke&\#x27;s thesis is that AI&\#x27;s measurable effect so far is a broad boom in small software serving hundreds or thousands of users, not an explosion of blockbuster products — a causal link he argues is strongly implied but not directly proven.
 
-**Tags**: `#AI coding agents`, `#software ecosystem metrics`, `#open-source plugins`, `#empirical analysis`, `#hobbyist software`
+**Tags**: `#AI coding agents`, `#software ecosystem measurement`, `#open source plugins`, `#empirical analysis`, `#developer productivity`
 
 ---
 
 ## Financial News
 
 <a id="item-finance-news-1"></a>
-### [IMF: Rural Chinese healthcare spending is second only to U.S. as share of income](https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html) ⭐️ 7.0/10
+### [AI data-centre listings pulled as market selloff and higher rates hit deal boom](https://www.kitco.com/news/off-the-wire/2026-10-15/market-selloff-rising-rates-test-ai-data-centre-deal-boom) ⭐️ 7.0/10
 
-IMF research in a new book says rural Chinese households spend 8.7% of disposable income on healthcare, second only to the U.S. at nearly 9.9% among 20 major economies. The IMF says higher government health and social-security spending in rural areas could significantly reduce rural households&\#x27; savings rate.
+Over the past week, AI data-centre listing plans from AirTrunk \(a REIT float\), Nvidia-backed Firmus and SoftBank-backed SB Energy were withdrawn or paused, as a market selloff and higher interest rates led investors to demand proof that companies can absorb rising rates and computing costs. Dealogic data show Asia data-centre merger and acquisition deals have reached $21.3 billion so far this year — roughly double full-year 2025&\#x27;s $10 billion — while equity financing for the sector fell 4.6% year on year.
 
-rss · CNBC Finance · Oct 15, 23:00
+telegram · zaihuapd · Oct 16, 05:10
 
-**「Background」** The figures come from the IMF&\#x27;s September 2026 book &quot;Toward a New Economic Growth Model for China,&quot; which examines how limited social spending pushes households—especially rural migrants without urban hukou registration, which determines access to local social services—to save more.
+**「Background」** AI data centres are capital-heavy projects usually financed through debt and equity sales, so higher interest rates directly raise the cost of building them. Blackstone-backed AirTrunk had already planned a Singapore real-estate investment trust \(REIT\) listing — a property fund whose shares trade publicly — before delaying it.
 
-**「Impact」** The IMF&\#x27;s proposed increase in rural health and social-security spending would affect rural households and migrant workers - who save about 14% of income, compared with about 6% for urban hukou residents - by reducing the health-cost burden that drives saving.
+**「Impact」** Data-centre developers in Asia that had lined up share listings now face delayed or reduced fundraising and may instead sell assets, as the doubling of data-centre M&amp;A to $21.3bn this year alongside a 4.6% fall in equity financing shows buyers and backers shifting toward deals where they can verify projects can cover higher borrowing and computing costs.
 
 <details><summary>References</summary>
 <ul>
-<li>Toward a New Economic Growth Model for China</li>
-<li>Toward a New Economic Growth Model for China | IMF eLibrary</li>
+<li><a href="https://www.businesstimes.com.sg/companies-markets/why-tech-data-centre-ipos-are-facing-delays-and-what-investors-can-expect-market-now">Why tech and data centre IPOs are facing delays now - The ...</a></li>
+<li><a href="https://therealdeal.com/international/2026/10/14/data-center-ipos-suddenly-on-shaky-ground-worldwide/">Data Center IPOs Suddenly on Shaky Ground Worldwide</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#China economy`, `#healthcare spending`, `#IMF report`, `#household savings`, `#rural-urban inequality`
+**Tags**: `#AI data centers`, `#IPO withdrawals`, `#interest rates`, `#Asia M&amp;A`, `#market selloff`
 
 ---
 
 <a id="item-finance-news-2"></a>
-### [Harvard endowment returns 27.1% in fiscal 2026, with SpaceX as top holding](https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html) ⭐️ 7.0/10
+### [China proposes temporary export registration for 40 AI, biopharma and solar technologies](https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2026/art_c99f95ca0cd043829ac9991495fc283c.html) ⭐️ 7.0/10
 
-Harvard University&\#x27;s endowment returned 27.1% in fiscal 2026, its strongest result in five years, ending June 30 at nearly $68 billion and beating the S&amp;P 500&\#x27;s 22.3% total return by 4.8 percentage points, the school said in its annual report. Harvard also disclosed a $2.2 billion SpaceX stake as its largest holding, while federally sponsored research revenue fell 19.5% to $509 million and the university said the federal excise tax on its net investment income will rise from 1.4% to 8%, which it estimates will cost roughly $300 million a year.
+China&\#x27;s Ministry of Commerce has proposed adding 40 artificial intelligence, biopharmaceutical and photovoltaic technologies to its export-control technology catalog, subjecting them to temporary export registration; the measure is a draft now open for public comment. The draft covers 23 AI items \(including large models, agents and compute clusters\), 5 biopharma items \(including cell and gene therapy and small nucleic acid drugs\) and 12 solar items \(including polysilicon, wafer and cell manufacturing and key equipment\), and excludes AI technology already in the public domain through open-source release or academic publication, according to the ministry.
 
-rss · CNBC Finance · Oct 15, 19:53
+telegram · zaihuapd · Oct 16, 09:12
 
-**「Background」** Harvard&\#x27;s fiscal 2026 covers the 12 months ending June 30, 2026, and the federal excise tax on the endowment&\#x27;s net investment income rose to 8% from 1.4% under legislation signed in July 2025. The Trump administration has also frozen or withheld federal research funding from the university, part of a broader dispute with the school.
+**「Background」** China&\#x27;s Catalogue of Technologies Prohibited or Restricted from Export sets out which technologies need government clearance before being transferred abroad, and the Ministry of Commerce revises it from time to time. This revision is still a draft open for public comment, so the 40 listed technologies are proposals rather than final rules, and the source gives no implementation dates.
 
-**「Impact」** Harvard said it smooths endowment distributions, so the tax increase and lower federal research funding constrain the operating support its academic and research programs receive gradually rather than all at once.
+**「Who is affected」** Chinese companies that license or transfer these AI, biopharma and solar technologies abroad — along with the foreign partners and buyers relying on them, including polysilicon, wafer and cell manufacturers — would face a pre-export registration step while the draft is under consultation, adding a compliance requirement before any deal proceeds.
 
 <details><summary>References</summary>
 <ul>
-<li>Trump Signs Spending Package Into Law, Imposing 8% Tax on Harvard&#x27;s ...</li>
-<li>Money Up, Admissions Down: Harvard&#x27;s Endowment Management ...</li>
+<li><a href="https://finance.sina.com.cn/tech/digi/2026-10-16/doc-inivmiic6932807.shtml">商务部回应《中国禁止出口限制出口技术目录》拟增列人工智能等技术：...</a></li>
+<li><a href="https://news.cctv.com/2026/10/16/ARTIvDJFbJhCwbMmCTdWztKG261016.shtml">商务部新闻发言人就修订《中国禁止出口限制出口技术目录》答记者问_新...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Harvard endowment`, `#SpaceX`, `#higher education funding`, `#endowment tax`, `#institutional investing`
-
----
-
-<a id="item-finance-news-3"></a>
-### [AI 数据中心投资受市场回调与利率上升，多项投资被撤回和暂停](https://www.kitco.com/news/off-the-wire/2026-10-15/market-selloff-rising-rates-test-ai-data-centre-deal-boom) ⭐️ 7.0/10
-
-AI data-centre investment is being tested by market selloff and rising rates, with several listings withdrawn or paused and Asia data-centre M&amp;A reportedly doubling prior-year levels.
-
-telegram · zaihuapd · Oct 16, 05:10
-
-**Tags**: `#AI data centers`, `#financing`, `#IPOs`, `#interest rates`, `#data-center M&amp;A`
-
----
-
-<a id="item-finance-news-4"></a>
-### [中国商务部就AI、生物医药、光伏40项技术出口管制公开征求意见](https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2026/art_c99f95ca0cd043829ac9991495fc283c.html) ⭐️ 7.0/10
-
-中国商务部正就修订《中国禁止出口限制出口技术目录》公开征求意见，拟新增人工智能、生物医药、光伏三个领域共40项技术。其中人工智能23项（大模型、智能体、算力集群、信息处理），已通过开源或发表论文进入公共领域的技术不纳入管理；生物医药5项（细胞和基因治疗、小核酸药、病原微生物），不涉及所有权转让的对外授权适用自动许可等便利措施；光伏12项（多晶硅制造、硅片制造、电池制造），管理范围还包括承载相关技术的关键和核心设备。该措施目前为征求意见稿，尚未成为最终生效规则。
-
-telegram · zaihuapd · Oct 16, 09:12
-
-**「Background」** China&\#x27;s export-control catalogue is the official list of technologies that companies need government permission to transfer abroad. The Commerce Ministry&\#x27;s proposed revision, which is still a draft open for public comment, would add 40 technologies — 23 in artificial intelligence, 5 in biomedicine and 12 in photovoltaics — with exemptions for AI technologies already released publicly and easier licensing for some biotech licensing deals.
-
-**Tags**: `#China export controls`, `#artificial intelligence`, `#biotechnology`, `#photovoltaics`, `#trade policy`
+**Tags**: `#export controls`, `#China regulation`, `#artificial intelligence`, `#biopharmaceuticals`, `#solar/photovoltaics`
 
 ---
